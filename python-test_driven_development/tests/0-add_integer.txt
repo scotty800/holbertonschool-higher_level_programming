@@ -14,6 +14,8 @@
 10
 >>> add_integer(10.50,10.11)
 20
+>>> add_integer(700,500)
+1200
 
 >>> add_integer(s,-100)
 Traceback (most recent call last):
@@ -30,3 +32,8 @@ SyntaxError: invalid syntax
 Traceback (most recent call last):
 ...
 NameError: name 'scotty' is not defined
+
+>>> add_integer(naruto,ns)
+Traceback (most recent call last):
+...
+NameError: name 'naruto' is not defined
