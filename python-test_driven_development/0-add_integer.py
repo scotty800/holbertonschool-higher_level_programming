@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+this code we could to calculate an operation like add
+"""
+
 
 def add_integer(a, b=98):
     """
