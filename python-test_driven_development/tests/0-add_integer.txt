@@ -39,3 +39,17 @@ NameError: name 'scotty' is not defined
 Traceback (most recent call last):
 ...
 NameError: name 'naruto' is not defined
+
+>>> add_integer(float('inf'), 7)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('nan'), 8)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
