@@ -24,12 +24,6 @@ Traceback (most recent call last):
 ...
 NameError: name 's' is not defined
 
->>> add_integer(@,-100)
-    add_integer(@,-100)
-                ^
-...
-SyntaxError: invalid syntax
-
 >>> add_integer(scotty,100)
 Traceback (most recent call last):
 ...
@@ -49,7 +43,3 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
 ...
 ValueError: cannot convert float NaN to integer
-
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
