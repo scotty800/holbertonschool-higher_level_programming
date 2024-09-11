@@ -1,0 +1,32 @@
+>>> add_integer(5,10)
+15
+>>> add_integer(-5,-5)
+-10
+>>> add_integer(-10,-100)
+-110
+>>> add_integer(5,-5)
+0
+>>> add_integer(-10,15)
+5
+>>> add_integer(50,100)
+150
+>>> add_integer(5.1,5.1)
+10
+>>> add_integer(10.50,10.11)
+20
+
+>>> add_integer(s,-100)
+Traceback (most recent call last):
+...
+NameError: name 's' is not defined
+
+>>> add_integer(@,-100)
+    add_integer(@,-100)
+                ^
+...
+SyntaxError: invalid syntax
+
+>>> add_integer(scotty,100)
+Traceback (most recent call last):
+...
+NameError: name 'scotty' is not defined
