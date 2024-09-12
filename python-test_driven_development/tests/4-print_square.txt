@@ -68,3 +68,13 @@ TypeError: print_square() takes 1 positional argument but 2 were given
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
+
+>>> print_square("hello")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(-1.50)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
