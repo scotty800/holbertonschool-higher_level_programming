@@ -43,3 +43,23 @@ OverflowError: cannot fit 'int' into an index-sized integer
 Traceback (most recent call last):
 ...
 ValueError: size must be >= 0
+
+>>> print_square(chr)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(1500000000000000000)
+Traceback (most recent call last):
+...
+MemoryError
+
+>>> print_square('size')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square("naruto", 2.1)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
