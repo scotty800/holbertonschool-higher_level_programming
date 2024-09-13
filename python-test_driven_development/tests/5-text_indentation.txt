@@ -1,0 +1,27 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("sasuke")
+sasuke
+
+>>> text_indentation("kirua: tu es trop fort pour moi. sasuke: je sais, je suis un utchiwa")
+kirua:
+
+tu es trop fort pour moi.
+
+sasuke:
+
+je sais, je suis un utchiwa
+
+>>> text_indentation(scotty)
+Traceback (most recent call last):
+...
+NameError: name 'scotty' is not defined
+
+>>> text_indentation(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
