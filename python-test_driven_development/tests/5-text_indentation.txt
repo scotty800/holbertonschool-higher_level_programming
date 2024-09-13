@@ -3,12 +3,12 @@
 sasuke
 
 >>> text_indentation("kirua: tu es trop fort pour moi. sasuke: je sais, je suis un utchiwa")
-kirua:
-
+ kirua:
+<BLANKLINE>
 tu es trop fort pour moi.
-
+<BLANKLINE>
 sasuke:
-
+<BLANKLINE>
 je sais, je suis un utchiwa
 
 >>> text_indentation(scotty)
