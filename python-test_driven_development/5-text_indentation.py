@@ -30,7 +30,7 @@ def text_indentation(text):
     while i < len(text):
         result += text[i]
         if text[i] in ".?:":
-            result += "\n\n"
+            result += "\n"
             i += 1
             while i < len(text) and text[i] == " ":
                 i += 1
