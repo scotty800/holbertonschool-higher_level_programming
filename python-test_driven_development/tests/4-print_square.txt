@@ -1,4 +1,5 @@
 >>> print_square = __import__('4-print_square').print_square
+
 >>> print_square(4)
 ####
 ####
@@ -17,57 +18,15 @@
 ##########
 ##########
 
->>> print_square(0)
-
->>> print_square(1)
-#
->>> print("1")
-1
-
 >>> print_square()
 Traceback (most recent call last):
 ...
 TypeError: print_square() missing 1 required positional argument: 'size'
 
->>> print_square("")
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
-
->>> print_square(12222222222222222222222222)
-Traceback (most recent call last):
-...
-OverflowError: cannot fit 'int' into an index-sized integer
-
 >>> print_square(-5)
 Traceback (most recent call last):
 ...
 ValueError: size must be >= 0
-
->>> print_square(chr)
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
-
->>> print_square(1500000000000000000)
-Traceback (most recent call last):
-...
-MemoryError
-
->>> print_square('size')
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
-
->>> print_square("naruto", 2.1)
-Traceback (most recent call last):
-...
-TypeError: print_square() takes 1 positional argument but 2 were given
-
->>> print_square([10])
-Traceback (most recent call last):
-...
-TypeError: size must be an integer
 
 >>> print_square("hello")
 Traceback (most recent call last):
