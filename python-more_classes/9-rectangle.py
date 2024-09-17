@@ -12,7 +12,6 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = '#'
-    square = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -23,7 +22,6 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-        self.instance_attribute = (width == height)
 
     @property
     def width(self):
