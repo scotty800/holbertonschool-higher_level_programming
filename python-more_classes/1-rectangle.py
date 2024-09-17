@@ -17,8 +17,8 @@ class Rectangle:
         :param width: The width of the rectangle (default is 0).
         :param height: The height of the rectangle (default is 0).
         """
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
