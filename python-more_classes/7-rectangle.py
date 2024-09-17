@@ -94,6 +94,7 @@ class Rectangle:
         for index in range(self.__height):
             result += str(self.print_symbol) * self.width + "\n"
         return result.strip()
+
     def __repr__(self):
         """
         Returns a string representation that can be used to
