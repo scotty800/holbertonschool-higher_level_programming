@@ -90,10 +90,10 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        for index in range(self.__height - 1):
-            print(str(self.print_symbol) * self.width)
-        return str(self.print_symbol * self.width)
-
+        result = ""
+        for index in range(self.__height):
+            result += str(self.print_symbol) * self.width + "\n"
+        return result.strip()
     def __repr__(self):
         """
         Returns a string representation that can be used to
@@ -103,5 +103,9 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
+        """
+        Destructor method that is called when an instance is deleted.
+        It decrements the number_of_instances class attribute.
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
