@@ -22,6 +22,7 @@ class Rectangle:
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
+        self.instance_attribute = (width == height)
 
     @property
     def width(self):
