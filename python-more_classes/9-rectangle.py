@@ -20,8 +20,8 @@ class Rectangle:
         :param width: The width of the rectangle (default is 0).
         :param height: The height of the rectangle (default is 0).
         """
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
         self.instance_attribute = (width == height)
 
@@ -137,5 +137,5 @@ class Rectangle:
 
     Returns:
         Rectangle: A new Rectangle instance with equal width and height.
-        """
+    """
         return cls(size, size)
