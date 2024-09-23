@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Validates that the provided value is a positive integer.
+"""
+
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
