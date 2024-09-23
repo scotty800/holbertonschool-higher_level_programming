@@ -50,6 +50,11 @@
 >>> print(my_list)
 [1, 'Betty', 'scott', 5]
 
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+...  
+TypeError: 'NoneType' object is not iterable
+
 >>> MyList.append("a")
 Traceback (most recent call last):
 ...
