@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module defines a class BaseGeometry with an unimplemented area method
+and an integer_validator method.
+"""
+
+
 class BaseGeometry:
     """
     Base class for geometry-related operations.
@@ -29,9 +35,16 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
+    """
+    Validates that the provided value is a positive integer.
+    """
     def __init__(self, width, height):
-        self.integer_validator("width",width)
+        """
+        Validates that the provided value is a positive integer.
+        """
+        self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
