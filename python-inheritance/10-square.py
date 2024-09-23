@@ -6,6 +6,7 @@ Validates that the provided value is a positive integer.
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
     Validates that the provided value is a positive integer.
@@ -17,6 +18,7 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         self.__size = size
         super().__init__(self.__size, self.__size)
+
     def area(self):
         """
         Validates that the provided value is a positive integer.
