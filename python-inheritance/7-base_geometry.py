@@ -4,6 +4,7 @@ This module defines a class BaseGeometry with an unimplemented area method
 and an integer_validator method.
 """
 
+
 class BaseGeometry:
     """
     Base class for geometry-related operations.
