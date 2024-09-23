@@ -50,11 +50,6 @@
 >>> print(my_list)
 [1, 'Betty', 'scott', 5]
 
->>> my_list.append(l)
-Traceback (most recent call last):
-...
-NameError: name 'l' is not defined
-
 >>> MyList.append("a")
 Traceback (most recent call last):
 ...
