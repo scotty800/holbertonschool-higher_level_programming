@@ -75,3 +75,8 @@ Traceback (most recent call last):
 ...
     print(sorted(self))
 TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
