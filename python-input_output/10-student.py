@@ -27,7 +27,7 @@ class Student:
         dict: Un dictionnaire ontenant les attributs de l'instance.
         """
         if attrs is None:
-            return self.__str__
+            return self.__dict__
 
         dict_n = {}
         for index in attrs:
