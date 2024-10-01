@@ -24,13 +24,13 @@ class Student:
         """
         Renvoie un dictionnaire représentant l'étudiant.
         Returns:
-        dict: Un dictionnaire contenant les attributs de l'instance.
+        dict: Un dictionnaire ontenant les attributs de l'instance.
         """
         if attrs is None:
             return self.__str__
 
         dict_n = {}
         for index in attrs:
-            if index in attrs:
+            if index in self.__dict__:
                 dict_n[index] = self.__dict__[index]
         return dict_n
