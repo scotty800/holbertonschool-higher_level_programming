@@ -46,5 +46,5 @@ class Student:
         et valeurs à mettre à jour
         pour l'instance.
         """
-        for key, value in json.items:
+        for key, value in json.items():
             self.__dict__[key] = value
