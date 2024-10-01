@@ -4,7 +4,7 @@ Classe représentant un étudiant.
 """
 
 
-class student:
+class Student:
     """
     Classe représentant un étudiant.
     """
@@ -13,7 +13,7 @@ class student:
         Initialisation des attributs de l'étudiant.
         Args:
         first_name (str): Prénom de l'étudiant.
-        ast_name (str): Nom de famille de l'étudiant.
+        ast_name (str): Nom de famlle de l'étudiant.
         age (int): Âge de l'étudiant.
         """
         self.first_name = first_name
