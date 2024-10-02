@@ -22,14 +22,14 @@ class CustomObject:
         age (int): L'âge de la personne.
         is_student (bool): Indique si la personne est étudiante.
         """
-        self.__name = name
-        self.__age = age
-        self.__is_student = is_student
+        self.name = name
+        self.age = age
+        self.is_student = is_student
 
     def display(self):
         """Affiche les attributs de l'objet CustomObject."""
         print("Name: {}\nAge: {}\nIs Student: {}\n"
-              .format(self.__name, self.__age, self.__is_student))
+              .format(self.name, self.age, self.is_student))
 
     def serialize(self, filename):
         """
