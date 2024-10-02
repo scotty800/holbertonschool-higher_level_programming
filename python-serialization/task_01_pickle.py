@@ -53,5 +53,5 @@ class CustomObject:
         try:
             with open(filename, 'rb') as fic:
                 return pickle.load(fic)
-        except FileNotFoundError:
+        except Exception:
             return None
