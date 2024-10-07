@@ -5,7 +5,8 @@ import csv
 
 
 def fetch_and_print_posts():
-    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    url = "https://jsonplaceholder.typicode.com/posts"
+    response = requests.get(url)
 
     print("Status Code: {}".format(response.status_code))
 
@@ -16,7 +17,8 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
-    response = requests.get('https://jsonplaceholder.typicode.com/posts')
+    url = "https://jsonplaceholder.typicode.com/posts"
+    response = requests.get(url)
 
     if response.status_code == 200:
         post = response.json()
