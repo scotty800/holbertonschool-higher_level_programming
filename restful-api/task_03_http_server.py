@@ -1,36 +1,34 @@
 #!/usr/bin/python3
 
 import json
-from http.server import HTTPServer, BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
-class Serv(BaseHTTPRequestHandler):
+class SimpleAPIHandler(BaseHTTPRequestHandler):
+
     def do_GET(self):
+
         if self.path == '/':
             self.send_response(200)
-            self.send_header('content-type', 'text/plain')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"Hello, this is a simple API!")
+            self.wfile.write(b'Hello, this is a simple API!')
         elif self.path == '/data':
-            self.send_response(200)
-            self.send_header('Content-type', 'application/json')
-            self.end_headers()
+
             data = {
                 "name": "John",
                 "age": 30,
                 "city": "New York"
             }
+            self.send_response(200)
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
             self.wfile.write(json.dumps(data).encode('utf-8'))
-
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('Content-Type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            status = {
-                "status": "OK"
-            }
-            self.wfile.write(json.dumps(status).encode('utf-8'))
-
+            self.wfile.write(b'OK')
         else:
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
@@ -38,8 +36,8 @@ class Serv(BaseHTTPRequestHandler):
             self.wfile.write(b'Endpoint not found')
 
 
-def run(server_class=HTTPServer, handler_class=Serv, port=8000):
-    server_address = ('', 8000)
+def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
+    server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print("Serving on port {}...".format(port))
     httpd.serve_forever()
