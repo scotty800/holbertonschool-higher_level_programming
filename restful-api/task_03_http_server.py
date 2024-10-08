@@ -5,7 +5,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 class Serv(BaseHTTPRequestHandler):
-    def do_Get(self):
+    def do_GET(self):
         if self.path == '/':
             self.send_response(200)
             self.send_header('content-type', 'text/plain')
@@ -24,13 +24,16 @@ class Serv(BaseHTTPRequestHandler):
 
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-Type', 'application/json')
             self.end_headers()
-            self.wfile.write(b'ok')
+            status = {
+                "status": "OK"
+            }
+            self.wfile.write(json.dumps(status).encode('utf-8'))
 
         else:
             self.send_response(404)
-            self.send_header('Content-type', 'application/json')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b'Endpoint not found')
 
