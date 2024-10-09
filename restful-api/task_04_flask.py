@@ -4,10 +4,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {
-    "jane": {"username": "jane", "name": "Jane", "age": 28,
-             "city": "Los Angeles"},
-}
+users = {}
 
 
 @app.route('/')
@@ -28,7 +25,7 @@ def status():
 @app.route('/users/<username>')
 def name(username):
     if username in users:
-        return jsonify(users[username])
+        return jsonify({"username": username})
     else:
         return jsonify({"error": "User not found"}), 404
 
