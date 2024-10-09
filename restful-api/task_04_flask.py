@@ -49,7 +49,7 @@ def add():
     }
 
     return jsonify({
-        "message": "User added successfully",
+        "message": "User added",
         "user": users[username]
     }), 201
 
