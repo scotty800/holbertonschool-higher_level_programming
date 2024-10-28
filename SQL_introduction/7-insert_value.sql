@@ -1,0 +1,1 @@
+INSERT INTO first_table (id, name) VALUES (18, 'Best School')
