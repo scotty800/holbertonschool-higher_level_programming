@@ -8,6 +8,6 @@ USE hbtn_0d_usa;
 -- Il est aussi défini comme clé primaire (PRIMARY KEY) et ne peut pas être NULL (NOT NULL).
 -- "name" est un champ texte (VARCHAR) pouvant contenir jusqu'à 256 caractères et ne peut pas être NULL.
 CREATE TABLE IF NOT EXISTS states (
-    id INT AUTO GENERATED UNIQUE NOT NULL PRIMARY KEY,
+    id INT AUTO_INCREMENT UNIQUE NOT NULL PRIMARY KEY,
     name VARCHAR(256) NOT NULL
 );
