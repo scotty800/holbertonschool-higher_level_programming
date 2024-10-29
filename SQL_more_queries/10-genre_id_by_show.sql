@@ -7,5 +7,5 @@
 -- en ordre croissant, puis par l'identifiant de genre (tv_show_genres.genre_id) en ordre croissant.
 SELECT tv_shows.title, tv_shows_genres.genre.id
 FROM tv_shows
-JOIN tv_show_genres ON tv_shows.id = tv_shows_genres.tv_show_id
+JOIN tv_show_genres ON tv_shows.id = tv_shows_genres.show_id
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
