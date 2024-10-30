@@ -21,7 +21,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     """Création d'un objet curseur pour exécuter les commandes SQL"""
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
 
     """Récupération de toutes les lignes de résultat de la requête"""
     state = cursor.fetchall()
