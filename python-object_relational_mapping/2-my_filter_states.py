@@ -1,34 +1,27 @@
 #!/usr/bin/python3
-"""Connexion à la base de données MySQL
-avec les informations
-d'identification passées en arguments
-"""
-import MySQLdb
+
+"""script that takes in an argument and displays all values,
+in the states table of hbtn_0e_0_usa where name matches the argument"""
+
 import sys
+import MySQLdb
 
 if __name__ == "__main__":
-    """Connexion à la base de données
-    MySQL avec les informations
-    d'identification passées en arguments
-    """
-connection = MySQLdb.connect(
-     host='localhost',
-     port=330,
-     user=sys.argv[1],
-     password=sys.argv[2],
-     database=sys.argv[3]
-)
+    connection = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
+    )
 
-cursor = connection.cursor()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY\
+            '{}' ORDER BY states.id".format(sys.argv[4]))
+    rows = cursor.fetchall()
 
-cursor.execute(
-     "SELECT * FROM states WHERE NAME lIKE BINARY\
-        '{}' ORDER BY states.id".format(sys.argv[4]))
+    for row in rows:
+        print(row)
 
-state = cursor.fetchall()
-
-for row in state:
-    print(row)
-
-cursor.close()
-connection.close()
+    cursor.close()
+    connection.close()
