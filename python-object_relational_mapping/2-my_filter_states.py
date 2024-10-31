@@ -19,13 +19,11 @@ connection = MySQLdb.connect(
      database=sys.argv[3]
 )
 
-state_name_searched = sys.argv[4]
-
 cursor = connection.cursor()
 
 cursor.execute(
      "SELECT * FROM states WHERE NAME lIKE BINARY\
-        '{}' ORDER BY states.id".format(state_name_searched))
+        '{}' ORDER BY states.id".format(sys.argv[4]))
 
 state = cursor.fetchall()
 
