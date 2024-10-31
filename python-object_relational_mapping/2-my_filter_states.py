@@ -25,7 +25,7 @@ cursor = connection.cursor()
 
 cursor.execute(
      "SELECT * FROM states WHERE NAME lIKE BINARY\
-        '{}' ORDER BY id ASC".format(state_name_searched))
+        '{}' ORDER BY states.id".format(state_name_searched))
 
 state = cursor.fetchall()
 
