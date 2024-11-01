@@ -21,10 +21,10 @@ if __name__ == "__main__":
                            (mysql_username,  mysql_password, database_name))
     Session = sessionmaker(bind=engine)
     session = Session()
-    cities = session.query(City).join(State).order_by(City.id).all()
+    cities = session.query(City, State).join(State).all()
 
-    for city in cities:
-        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
+    for city, state in cities:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.commit()
     session.close()
