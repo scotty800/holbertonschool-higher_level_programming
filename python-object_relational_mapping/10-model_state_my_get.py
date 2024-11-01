@@ -22,10 +22,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name == state_name_to_search).first()
+    state = session.query(State).filter(
+        State.name == state_name_to_search).first()
 
     if state:
-        print("{}: {}".format(state.id))
+        print("{}".format(state.id))
     else:
         print("Not found")
 
