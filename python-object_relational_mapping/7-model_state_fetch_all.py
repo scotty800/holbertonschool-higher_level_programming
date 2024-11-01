@@ -20,7 +20,7 @@ if __name__ == "__main__":
                            (mysql_username,  mysql_password, database_name))
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).order_by(State.id)
 
     for state in states:
         print("{}: {}".format(state.id, state.name))
