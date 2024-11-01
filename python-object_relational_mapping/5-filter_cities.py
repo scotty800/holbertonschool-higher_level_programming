@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     """Récupération de toutes les lignes de résultat de la requête"""
     state = cursor.fetchall()
-    
+
     print(", ".join(row[1] for row in state))
 
     cursor.close()
