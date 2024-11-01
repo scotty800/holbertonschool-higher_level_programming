@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class SomeStates(Base):
+class State(Base):
     """Class States"""
     __tablename__ = 'states'
 
